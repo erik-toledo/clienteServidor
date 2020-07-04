@@ -35,7 +35,7 @@ class ExampleDetail(APIView):
     def get(self,request,id ,format=None):
         example1 = self.get_object(id)
         if example1 == 404:
-            return Response(example1)
+            return Response("El id: "+ id +" no existe")
         else:
             serializer = Example1Serializer(example1)
             return Response(serializer.data)
