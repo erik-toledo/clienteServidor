@@ -4,9 +4,9 @@ from django.db import models
 class Example1(models.Model):
     
     name = models.CharField(max_length= 255, null = False)
-    edad = models.CharField(max_length= 2)
+    edad = models.CharField(max_length= 255, null = False)
     direccion = models.CharField(max_length= 255, null = False)
-    curp = models.CharField(max_length= 16)
+    curp = models.CharField(max_length= 255, null = False)
 
 
     def __str__(self):
